@@ -16,21 +16,6 @@ html, body {
 	color: var(--text);
 }
 
-/*
-#website-intro {
-	color: var(--title);
-	padding: 20px;
-	margin: 5px;
-	margin-top: 5%;
-	font-size: 60px;
-	color: #f21717;
-	text-transform: uppercase;
-	text-align: center;
-	text-shadow: 100;
-	font-weight: 1200;
-	
-}
-*/
 .text-box {
 	font-family: 'Droid Sans', sans-serif;
 	position: relative;
@@ -77,6 +62,7 @@ header {
 .viz {
 	padding: 0 5vw;
 /*	max-height: 1200vw;*/
+	margin-bottom: 5vw;
 }
 
 .viz-description {
@@ -96,4 +82,14 @@ header {
 .tableauPlaceholder {
 	margin: 0 auto;
 	align-content: center;
+	margin-bottom: 3vw;
+}
+
+.conclusion {
+	font-family: 'Droid Sans', sans-serif;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	text-transform: uppercase;
+	padding: 0 5vw;
 }
