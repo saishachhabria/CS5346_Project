@@ -1,0 +1,259 @@
+:root {
+	--color-1: #dcf5ff;
+	--color-2: #e6c86e;
+	--color-3: #64b964;
+	--color-4: #508cd7;
+	--color-5: #d77355;
+	--color-6: #646964;
+	--color-7: #55415f;
+	--color-8: #98d47c;
+	--title: red;
+	--text: #ebebeb;
+	--red: #b90000;
+	--black: #333333;
+	--highlight: #ff3636;
+}
+
+
+
+#legend {
+	position: relative;
+/*	padding: 20vw 10vw 5%;*/
+	font-size: 12px;
+	margin: 0 auto;
+/*	float: left;*/
+	z-index: 1;
+	background: transparent;
+}
+
+
+#visualisation {
+/*	float: right;*/
+	text-align: center;
+	z-index: 999;
+	max-width: 100%;
+}
+
+/* Labels */
+.label {
+	font-size: 11px;
+	fill: var(--text);
+	z-index: 999;
+}
+
+.highlight.label {
+	fill: var(--highlight);
+	font-size: 15px;
+}
+
+/* Map */
+.map-background {
+	fill: #002948 !important;
+}
+
+path.map {
+	fill: #000307 !important;
+}
+
+.map.highlight {
+	filter: brightness(100%);
+	/* fill: #223644 !important; */
+	fill: var(--red) !important;
+	/*    transform: scale(2);*/
+}
+
+.bar-group,
+.label,
+path.map {
+	cursor: pointer;
+}
+
+.bar-group.color-1 {
+	fill: var(--color-1);
+}
+
+.bar-group.color-2 {
+	fill: var(--color-2);
+}
+
+.bar-group.color-3 {
+	fill: var(--color-3);
+}
+
+.bar-group.color-4 {
+	fill: var(--color-4);
+}
+
+.bar-group.color-5 {
+	fill: var(--color-5);
+}
+
+.bar-group.color-6 {
+	fill: var(--color-6);
+}
+
+.bar-group.color-7 {
+	fill: var(--color-7);
+}
+
+.bar-group.color-8 {
+	fill: var(--color-8);
+}
+
+/* Selected */
+
+/*
+.bar-group.color-1 .highlight {
+	filter: brightness(100%); 
+	filter: invert(100%);
+}
+
+.bar-group.color-2 .highlight {
+	filter: brightness(100%);
+	filter: invert(100%);
+}
+
+.bar-group.color-3 .highlight {
+	filter: brightness(100%);
+	filter: invert(100%);
+}
+
+.bar-group.color-4 .highlight {
+	filter: brightness(100%);
+	filter: invert(100%);
+}
+
+.bar-group.color-5 .highlight {
+	filter: brightness(100%);
+	filter: invert(100%);
+}
+
+.bar-group.color-6 .highlight {
+	filter: brightness(100%);
+	filter: invert(100%);
+}
+
+.bar-group.color-7 .highlight {
+	filter: brightness(100%);
+	filter: invert(100%);
+}
+
+.bar-group.color-8 .highlight {
+	filter: brightness(100%);
+	filter: invert(100%);
+}
+*/
+
+/* Customize the label (the container) */
+.container {
+	display: block;
+	position: relative;
+	padding-left: 25px;
+	margin-bottom: 0px;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	height: 20px;
+	line-height: 16px;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 15px;
+	width: 15px;
+	/* background-color: #eee; */
+}
+
+.color-1 .checkmark {
+	background-color: var(--color-1);
+}
+
+.color-2 .checkmark {
+	background-color: var(--color-2);
+}
+
+.color-3 .checkmark {
+	background-color: var(--color-3);
+}
+
+.color-4 .checkmark {
+	background-color: var(--color-4);
+}
+
+.color-5 .checkmark {
+	background-color: var(--color-5);
+}
+
+.color-6 .checkmark {
+	background-color: var(--color-6);
+}
+
+.color-7 .checkmark {
+	background-color: var(--color-7);
+}
+
+.color-8 .checkmark {
+	background-color: var(--color-8);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+.selected .checkmark:after {
+	display: block;
+}
+
+.container .checkmark:after {
+	left: 5px;
+	top: 1px;
+	width: 4px;
+	height: 8px;
+	border: solid white;
+	border-width: 0 2px 2px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+	opacity: 0.4;
+}
+
+#ie-only {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: none;
+	background: var(--text);
+	line-height: 20px;
+	color: #fff;
+	padding-left: 20px;
+}
+
+.query {
+
+	padding: 50px 20px;
+	text-align: center;
+	align-items: center;
+
+}
+
+.query div {
+	margin: 0 auto;
+}

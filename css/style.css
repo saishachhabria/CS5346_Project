@@ -1,0 +1,99 @@
+:root {
+		--title: red;
+		--text: #ebebeb;
+		--red: #b90000;
+		--black: #333333;
+	
+		
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	max-width: 100%;
+	background-color: var(--black);
+	font-family: 'Open Sans';
+	color: var(--text);
+}
+
+/*
+#website-intro {
+	color: var(--title);
+	padding: 20px;
+	margin: 5px;
+	margin-top: 5%;
+	font-size: 60px;
+	color: #f21717;
+	text-transform: uppercase;
+	text-align: center;
+	text-shadow: 100;
+	font-weight: 1200;
+	
+}
+*/
+.text-box {
+	font-family: 'Droid Sans', sans-serif;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: uppercase;
+}
+
+.text-box h1 {
+	font-size: 6vw;
+	font-weight: 900;
+	background-color: var(--red);
+	color: var(--text);
+	display: block;
+	padding: .5em;
+}
+
+.text-box h1:nth-child(2) {
+	position: absolute;
+	background-color: var(--black);
+	color: var(--text);
+	clip-path: inset(-1% -1% 50% -1%); 
+}
+.names {
+	text-align: center;
+	width: 100%;
+	table-layout: fixed;
+}
+
+header {
+	margin: auto;
+	padding: 0 10%;
+	max-width: 100%;
+}
+.viz-heading {
+	text-align: center;
+	background: var(--red);
+	text-transform: uppercase;
+	font-weight: 900;
+	padding: 10px;
+}
+
+.viz {
+	padding: 0 5vw;
+/*	max-height: 1200vw;*/
+}
+
+.viz-description {
+	font-weight: 600;
+	padding: 3vw 0;
+}
+
+.viz-1 {
+/*	position: relative;*/
+/*	height: 200vw;*/
+}
+
+.tableau {
+	align-items: center;
+}
+
+.tableauPlaceholder {
+	margin: 0 auto;
+	align-content: center;
+}

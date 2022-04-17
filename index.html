@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Where should I(m)migrate?">
+	<meta name="keywords" content="data, visualisation">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Where should I(m)migrate?</title>
+
+	<script src="./js/dist/d3.v4.js"></script>
+	<script src="./js/dist/topojson.v1.min.js"></script>
+	<script src="./js/dist/queue.v1.min.js"></script>
+	<script src="./js/dist/d3-scale-radial.js"></script>
+	<script src="./js/globe.js"></script>
+	<script src="./js/stacked-bar-chart.js"></script>
+
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/globe.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+	<!--	Fonts	-->
+	<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+	<link href='http://fonts.googleapis.com/css?family=Droid+Sans:700' rel='stylesheet'>
+
+
+</head>
+
+<body>
+	<!--
+    <div id="ie-only">
+        Sorry, this visualisation will only display properly on modern browsers. Please view it on Firefox or Chrome.
+    </div>
+-->
+	<!--	<h1 data-aos="zoom-out-up" id="website-intro">Where should I(m)migrate?</h1>-->
+	<div data-aos="zoom-out-up" class="text-box">
+		<h1>Where should I(m)migrate?</h1>
+		<h1>Where should I(m)migrate?</h1>
+	</div>
+
+	<header>
+		<table data-aos="fade-down" class="names">
+			<tr>
+				<th class="student">Dolly Agarwal</th>
+				<th class="student">Prudhvi Kumar Daruvuri</th>
+				<th class="student">Saisha Ajay Chhabria</th>
+			</tr>
+			<tr>
+				<td>A0229589H</td>
+				<td>A0228490B</td>
+				<td>A0244449X</td>
+			</tr>
+		</table>
+		<div data-aos="fade-down" class="description">
+			<p>When it comes to choosing the best country to live in, the answer we come up with might differ from the answers of other people, especially because it all depends on what we are using to define a country as being the best. Whether it’s happiness levels, overall financial stability, type of climate, or something completely unrelated to any of these suggestions, the definition of the number one country to live in is entirely subjective.</p>
+			<p>Through this project, we intend to help all those who are thinking of moving to another country, or wondering where their current home ranks in the list of living destinations.</p>
+		</div>
+		<div data-aos="fade-down" class="background">
+			This website was built as part of our course CS5346 Information Visualization @ NUS.
+		</div>
+	</header>
+
+	<main>
+		<div class="data">
+
+		</div>
+
+		<div class="visualizations">
+
+
+			<div class="viz viz-1">
+				<h1 class="viz-heading">My country or yours?</h1>
+				<p class="viz-description">Select your preferences and explore the globe to see how different countries rank! </p>
+				<div id="legend"></div>
+				<div data-aos="zoom-out-up" id="visualisation">
+					<svg width="800" height="900"></svg>
+				</div>
+				<div class="tableau">
+					<div data-aos="zoom-out-up" class='tableauPlaceholder' id='viz1650115580511' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;pa&#47;parallelcoordinatecountries&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+							<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+							<param name='embed_code_version' value='3' />
+							<param name='site_root' value='' />
+							<param name='name' value='parallelcoordinatecountries&#47;Dashboard1' />
+							<param name='tabs' value='no' />
+							<param name='toolbar' value='yes' />
+							<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;pa&#47;parallelcoordinatecountries&#47;Dashboard1&#47;1.png' />
+							<param name='animate_transition' value='yes' />
+							<param name='display_static_image' value='yes' />
+							<param name='display_spinner' value='yes' />
+							<param name='display_overlay' value='yes' />
+							<param name='display_count' value='yes' />
+							<param name='language' value='en-US' /></object></div>
+				</div>
+			</div>
+
+
+			<div class="viz viz-2">
+				<h1 class="viz-heading">The rise in migration across regions</h1>
+				<p class="viz-description"> Migration has gained prominence in recent years, and this trend can be seen in all the 4 different regions. Immigration to different regions has been rising since the 1990s, albeit with different rates across continents. This trend is prominent in Asia with a steep rise in number of immigrants as well as emigrants. In Europe there is only ~30% increase in emigrants in last 30 years, which highlights that people in Europe may not generally look out for better opportunities.
+				</p>
+				<div class="tableau">
+					<div data-aos="zoom-out-up" class='tableauPlaceholder' id='viz1650115682319' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Im&#47;ImmigrantsEmigrantsContinentWise&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+							<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+							<param name='embed_code_version' value='3' />
+							<param name='site_root' value='' />
+							<param name='name' value='ImmigrantsEmigrantsContinentWise&#47;Dashboard1' />
+							<param name='tabs' value='no' />
+							<param name='toolbar' value='yes' />
+							<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Im&#47;ImmigrantsEmigrantsContinentWise&#47;Dashboard1&#47;1.png' />
+							<param name='animate_transition' value='yes' />
+							<param name='display_static_image' value='yes' />
+							<param name='display_spinner' value='yes' />
+							<param name='display_overlay' value='yes' />
+							<param name='display_count' value='yes' />
+							<param name='language' value='en-US' /></object></div>
+				</div>
+			</div>
+
+			<div class="viz viz-3">
+				<h1 class="viz-heading">Distinguishable immigrant-emigrant trends in various continents</h1>
+				<p class="viz-description">Migration patterns are not uniform and vary across regions. The pre-existing gap between the number of emigrants and immigrants in America has further widened in the last 5 years. Contrary to this, the difference in trends of immigrants and emigrants is low in Asia.
+				</p>
+				<div data-aos="zoom-out-up" class='tableauPlaceholder' id='viz1650117120254' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Im&#47;ImmigrationEmigrationandQualityofLife2015-2020&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+						<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+						<param name='embed_code_version' value='3' />
+						<param name='site_root' value='' />
+						<param name='name' value='ImmigrationEmigrationandQualityofLife2015-2020&#47;Dashboard1' />
+						<param name='tabs' value='no' />
+						<param name='toolbar' value='yes' />
+						<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Im&#47;ImmigrationEmigrationandQualityofLife2015-2020&#47;Dashboard1&#47;1.png' />
+						<param name='animate_transition' value='yes' />
+						<param name='display_static_image' value='yes' />
+						<param name='display_spinner' value='yes' />
+						<param name='display_overlay' value='yes' />
+						<param name='display_count' value='yes' />
+						<param name='language' value='en-US' /></object></div>
+			</div>
+
+			<div class="viz viz-4">
+				<h1 class="viz-heading">Migration network</h1>
+				<p class="viz-description">Select a country to see where most people prefer moving out to
+				</p>
+				<div data-aos="zoom-out-up" class='tableauPlaceholder' id='viz1650117278104' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Mi&#47;Migrantnetworkgraph&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+						<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+						<param name='embed_code_version' value='3' />
+						<param name='site_root' value='' />
+						<param name='name' value='Migrantnetworkgraph&#47;Dashboard1' />
+						<param name='tabs' value='no' />
+						<param name='toolbar' value='yes' />
+						<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Mi&#47;Migrantnetworkgraph&#47;Dashboard1&#47;1.png' />
+						<param name='animate_transition' value='yes' />
+						<param name='display_static_image' value='yes' />
+						<param name='display_spinner' value='yes' />
+						<param name='display_overlay' value='yes' />
+						<param name='display_count' value='yes' />
+						<param name='language' value='en-US' /></object></div>
+			</div>
+
+			<div class="viz viz-5">
+				<h1 class="viz-heading">Better quality of index of the country corresponds to more number of immigrants</h1>
+				<p class="viz-description">Select a country to see the number of immigrants and emigrants by year
+				</p>
+				<div data-aos="zoom-out-up" class='tableauPlaceholder' id='viz1650117593101' style='position: relative'><noscript><a href='#'><img alt='Dashboard 2 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Qu&#47;Ques1_16475323030660&#47;Dashboard2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+						<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+						<param name='embed_code_version' value='3' />
+						<param name='site_root' value='' />
+						<param name='name' value='Ques1_16475323030660&#47;Dashboard2' />
+						<param name='tabs' value='no' />
+						<param name='toolbar' value='yes' />
+						<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Qu&#47;Ques1_16475323030660&#47;Dashboard2&#47;1.png' />
+						<param name='animate_transition' value='yes' />
+						<param name='display_static_image' value='yes' />
+						<param name='display_spinner' value='yes' />
+						<param name='display_overlay' value='yes' />
+						<param name='display_count' value='yes' />
+						<param name='language' value='en-US' /></object></div>
+				<div data-aos="zoom-out-up" class='tableauPlaceholder' id='viz1650117782862' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Im&#47;ImmigrationEmigrationandQualityofLife&#47;Dashboard4&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+						<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+						<param name='embed_code_version' value='3' />
+						<param name='site_root' value='' />
+						<param name='name' value='ImmigrationEmigrationandQualityofLife&#47;Dashboard4' />
+						<param name='tabs' value='no' />
+						<param name='toolbar' value='yes' />
+						<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Im&#47;ImmigrationEmigrationandQualityofLife&#47;Dashboard4&#47;1.png' />
+						<param name='animate_transition' value='yes' />
+						<param name='display_static_image' value='yes' />
+						<param name='display_spinner' value='yes' />
+						<param name='display_overlay' value='yes' />
+						<param name='display_count' value='yes' />
+						<param name='language' value='en-US' /></object></div>
+			</div>
+
+			<div class="viz viz-6">
+				<h1 class="viz-heading">Percentage of Immigrants in different countries over the last 20 years</h1>
+				<p class="viz-description">The US is home to more migrants than any other nation. Middle-income nations such as China and India account for a growing share of world migrants.
+				</p>
+				<div data-aos="zoom-out-up" class='tableauPlaceholder' id='viz1650117950043' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pe&#47;PercentageofImmigrantsVsTotalPopulation&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+						<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+						<param name='embed_code_version' value='3' />
+						<param name='site_root' value='' />
+						<param name='name' value='PercentageofImmigrantsVsTotalPopulation&#47;Dashboard1' />
+						<param name='tabs' value='no' />
+						<param name='toolbar' value='yes' />
+						<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pe&#47;PercentageofImmigrantsVsTotalPopulation&#47;Dashboard1&#47;1.png' />
+						<param name='animate_transition' value='yes' />
+						<param name='display_static_image' value='yes' />
+						<param name='display_spinner' value='yes' />
+						<param name='display_overlay' value='yes' />
+						<param name='display_count' value='yes' />
+						<param name='language' value='en-US' /></object></div>
+			</div>
+		</div>
+		
+		<div class="conclusion">
+				<h1 class="viz-heading">In conclusion</h1>
+				<p class="viz-description">If we wanna write something here
+				</p>
+		</div>
+
+
+	</main>
+
+	<script>
+		AOS.init();
+	</script>
+	<script src="./js/script.js"></script>
+
+	<!--	Viz 1	-->
+	<script type='text/javascript'>
+		var divElement = document.getElementById('viz1650115580511');
+		var vizElement = divElement.getElementsByTagName('object')[0];
+		if (divElement.offsetWidth > 800) {
+			vizElement.style.width = '1000px';
+			vizElement.style.height = '827px';
+		} else if (divElement.offsetWidth > 500) {
+			vizElement.style.width = '1000px';
+			vizElement.style.height = '827px';
+		} else {
+			vizElement.style.width = '100%';
+			vizElement.style.height = '727px';
+		}
+		var scriptElement = document.createElement('script');
+		scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+		vizElement.parentNode.insertBefore(scriptElement, vizElement);
+	</script>
+	<!--	Viz 2	-->
+	<script type='text/javascript'>
+		var divElement = document.getElementById('viz1650115682319');
+		var vizElement = divElement.getElementsByTagName('object')[0];
+		if (divElement.offsetWidth > 800) {
+			vizElement.style.width = '1000px';
+			vizElement.style.height = '827px';
+		} else if (divElement.offsetWidth > 500) {
+			vizElement.style.width = '1000px';
+			vizElement.style.height = '827px';
+		} else {
+			vizElement.style.width = '100%';
+			vizElement.style.height = '727px';
+		}
+		var scriptElement = document.createElement('script');
+		scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+		vizElement.parentNode.insertBefore(scriptElement, vizElement);
+	</script>
+	<!--	Viz 3	-->
+	<script type='text/javascript'>
+		var divElement = document.getElementById('viz1650117120254');
+		var vizElement = divElement.getElementsByTagName('object')[0];
+		if (divElement.offsetWidth > 800) {
+			vizElement.style.width = '1000px';
+			vizElement.style.height = '827px';
+		} else if (divElement.offsetWidth > 500) {
+			vizElement.style.width = '1000px';
+			vizElement.style.height = '827px';
+		} else {
+			vizElement.style.width = '100%';
+			vizElement.style.height = '727px';
+		}
+		var scriptElement = document.createElement('script');
+		scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+		vizElement.parentNode.insertBefore(scriptElement, vizElement);
+	</script>
+
+	<script type='text/javascript'>
+		var divElement = document.getElementById('viz1650117278104');
+		var vizElement = divElement.getElementsByTagName('object')[0];
+		if (divElement.offsetWidth > 800) {
+			vizElement.style.width = '1200px';
+			vizElement.style.height = '827px';
+		} else if (divElement.offsetWidth > 500) {
+			vizElement.style.width = '1200px';
+			vizElement.style.height = '827px';
+		} else {
+			vizElement.style.width = '100%';
+			vizElement.style.height = '727px';
+		}
+		var scriptElement = document.createElement('script');
+		scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+		vizElement.parentNode.insertBefore(scriptElement, vizElement);
+	</script>
+
+	<script type='text/javascript'>
+		var divElement = document.getElementById('viz1650117593101');
+		var vizElement = divElement.getElementsByTagName('object')[0];
+		if (divElement.offsetWidth > 800) {
+			vizElement.style.width = '1000px';
+			vizElement.style.height = '827px';
+		} else if (divElement.offsetWidth > 500) {
+			vizElement.style.width = '1000px';
+			vizElement.style.height = '827px';
+		} else {
+			vizElement.style.width = '100%';
+			vizElement.style.height = '827px';
+		}
+		var scriptElement = document.createElement('script');
+		scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+		vizElement.parentNode.insertBefore(scriptElement, vizElement);
+	</script>
+
+	<script type='text/javascript'>
+		var divElement = document.getElementById('viz1650117782862');
+		var vizElement = divElement.getElementsByTagName('object')[0];
+		if (divElement.offsetWidth > 800) {
+			vizElement.style.width = '1000px';
+			vizElement.style.height = '827px';
+		} else if (divElement.offsetWidth > 500) {
+			vizElement.style.width = '1000px';
+			vizElement.style.height = '827px';
+		} else {
+			vizElement.style.width = '100%';
+			vizElement.style.height = '777px';
+		}
+		var scriptElement = document.createElement('script');
+		scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+		vizElement.parentNode.insertBefore(scriptElement, vizElement);
+	</script>
+
+	<script type='text/javascript'>
+		var divElement = document.getElementById('viz1650117950043');
+		var vizElement = divElement.getElementsByTagName('object')[0];
+		if (divElement.offsetWidth > 800) {
+			vizElement.style.width = '1000px';
+			vizElement.style.height = '827px';
+		} else if (divElement.offsetWidth > 500) {
+			vizElement.style.width = '1000px';
+			vizElement.style.height = '827px';
+		} else {
+			vizElement.style.width = '100%';
+			vizElement.style.height = '727px';
+		}
+		var scriptElement = document.createElement('script');
+		scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+		vizElement.parentNode.insertBefore(scriptElement, vizElement);
+	</script>
+
+</body></html>
