@@ -1,0 +1,60 @@
+<html><head>
+	<title>Global Database - Events</title>
+</head>
+
+<body>
+	<h1>Events</h1>
+	<table cellspacing="1" cellpadding="3" border="1">
+		<tr>
+			<th>Device Name</th>
+			<th>District</th>
+			<th>Event</th>
+			<th>Timestamp</th>
+		</tr>
+	</table>
+	<h1> Global Lockdown </h1>
+	<form method="post"><input type="button" id="activate" value="Activate"><input type="button" id="deactivate" value="Deactivate"></form>
+
+	<button id="activate" onclick=activate()> Activate </button><button onclick=deactivate()> Deactivate </button>
+</body>
+<script>
+	function activate() {
+		const event = {
+			'device_name': 'cloud',
+			'district': 1,
+			'event': 0,
+			'timestamp': '2020'
+		};
+		console.log(event);
+		fetch('https://63bf-103-6-150-165.ap.ngrok.io/api/event_activate', {
+			method: 'PUT',
+			mode: '*cors',
+			headers: {
+				'Content-Type': 'application/json',
+				'Access-Control-Request-Method': 'PUT',
+			},
+			data: JSON.stringify(event)
+		}).then(response => {
+			return response.json()
+		}).then(data => console.log(data));
+	};
+
+	function deactivate() {
+		const event = {
+			'device_name': 'cloud',
+			'district': 1,
+			'event': 0,
+			'timestamp': ' 2020'
+		};
+		fetch('https://3e3d-111-65-63-7.ap.ngrok.io/api/event_deactivate', {
+			method: 'PUT',
+			mode: 'same-origin',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			data: JSON.stringify(event)
+		}).then(response => {
+			return response.json()
+		}).then(data => console.log(data));
+	};
+</script></html>
